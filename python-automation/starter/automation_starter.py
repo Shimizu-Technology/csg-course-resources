@@ -1,4 +1,4 @@
-"""Learner starter. Paste the fictional CSV from orders.csv into RAW_CSV."""
+"""Learner starter with the fictional orders.csv rows embedded for browser use."""
 
 import csv
 from decimal import Decimal
