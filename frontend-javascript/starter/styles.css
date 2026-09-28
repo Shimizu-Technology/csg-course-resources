@@ -1,0 +1,14 @@
+:root { font-family: system-ui, sans-serif; line-height: 1.5; color: #16283d; background: #f4f7fa; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.container { width: min(100% - 2rem, 68rem); margin-inline: auto; }
+.site-header { background: #123653; color: white; padding: 2rem 0; }
+.card { background: white; border: 1px solid #c9d7e2; padding: 1.25rem; margin: 1rem 0; }
+label { display: block; margin-top: 1rem; font-weight: 700; }
+input, select, button { font: inherit; min-height: 2.75rem; }
+input, select { width: 100%; }
+button { background: #076b63; color: white; border: 0; padding: .5rem 1rem; }
+:focus-visible { outline: 3px solid #cf6d12; outline-offset: 3px; }
+.skip-link { position: absolute; left: -10000px; top: .5rem; background: white; padding: .5rem; }
+.skip-link:focus { left: .5rem; }
+/* TODO: create mobile-first task layout, readable task rows, and a two-column layout at 48rem. */
