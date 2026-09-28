@@ -2,6 +2,8 @@
 
 **Status on September 26, 2026:** repository prepared for review. The December learner cohort is not yet enrolled, and these links have not been checked from an enrolled learner account.
 
+**September 28 addition:** Six future courses now have learner-only starter folders in a held branch. They are not visible on `main`, not assigned to students in Learn, and not sale-ready. Check every file and link against its Learn lesson before distributing. In particular, the SQL Hafa fixture was verified in the held Hafa preview, while server sharing failed and fell back to a long snapshot URL. Keep the actual SQL and output in Learn submissions. The Rails starter must be rehearsed on a fresh Mac and Windows/WSL setup before it is required.
+
 ## Before giving learners a link
 
 - Compare `python-fundamentals/2026-12/starter/expense_summary.py` with the current Lesson 8 starter in production CSG Learn. The six expense records and budget should match exactly.
