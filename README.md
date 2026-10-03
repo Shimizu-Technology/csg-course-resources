@@ -30,6 +30,8 @@ A link alone is not the reviewed snapshot: repository branches and shared Hafa p
 
 ## For course staff
 
-Keep learner files here free of answers, private meeting links, student work, personal information, tokens, and client data. Staff solutions and assessment notes belong in the staff-only CSG Learn fields and the private Brain Dump pilot assets. Before a cohort starts, compare the starter and examples here with the current Learn lesson, run them in the production Hafa Python runtime, then make the repository available to the cohort. See [release checks](RELEASE.md).
+Keep learner files here free of answers, private meeting links, student work, personal information, tokens, and client data. Staff solutions and assessment notes belong in the staff-only CSG Learn fields and the private Brain Dump pilot assets. Before a cohort starts, compare the starter and examples here with the current Learn lesson and rehearse its supported runtime. See [release checks](RELEASE.md).
+
+This is the staff preparation repository for all nine courses. Do not grant whole-repository access to learners enrolled in only one course. Run `python3 tools/build_course_bundles.py` to prepare a separate ZIP for each course, including its free setup companion. Upload only the matching ZIP to that course's protected Learn resources after verifying the cohort entitlement. The build writes a SHA-256 manifest to `dist/`; GitHub access is not required for learners.
 
 This repository is private during course preparation. The learner folders are preparation material, not enrollment offers. Do not describe this repository as a public download until its access has been deliberately changed and checked.

@@ -4,7 +4,7 @@
 
 Before distribution, compare these files with the imported Learn course and exact recording script. Keep assessment references, staff keys, course-package JSON, provider services, credentials, seat files and private learner records out of this repository. Distinct worked practice is included for teaching; independent project solutions are withheld.
 
-Rehearse the current Hafa/browser/local route and all relative resource links using a separate learner profile. Private repository access must be checked for that learner, or deliver the same learner files through Learn. GitHub remains optional for browser-first courses. Fresh Mac/Windows/WSL setup and beginner attempts remain unobserved.
+Rehearse the current Hafa/browser/local route and all relative resource links using a separate learner profile. Deliver the matching per-course ZIP through the protected Learn course. Whole-repository access would expose all nine paid courses and is not the single-course delivery route. Verify that an enrolled learner can download their bundle and an unenrolled learner cannot. GitHub remains optional for browser-first courses. Fresh Mac/Windows/WSL setup and beginner attempts remain unobserved.
 
 Live AI access is supplied privately by CSG within the course allowance; it is not provided by these files. Record actual model evidence only after the HTTPS endpoint, allowance and expiry are provisioned. Fixture results are offline practice.
 
