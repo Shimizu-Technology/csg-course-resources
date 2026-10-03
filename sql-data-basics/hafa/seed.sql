@@ -1,4 +1,4 @@
--- Fictional CSG teaching rows. Paste into Hafa Code's seed.sql.
+-- Fictional assessed rows; use in Hafa seed.sql.
 INSERT INTO workshops VALUES
   (1, 'Python Basics', 'code', 4),
   (2, 'SQL Basics', 'data', 3),

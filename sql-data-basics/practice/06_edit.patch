@@ -1,0 +1,10 @@
+--- 06_start.sql
++++ 06_end.sql
+@@ -1,5 +1,5 @@
+ SELECT w.title, COUNT(r.id) AS confirmed
+ FROM workshops AS w
+-JOIN registrations AS r ON r.workshop_id = w.id
+-WHERE r.status = 'confirmed'
++LEFT JOIN registrations AS r
++  ON r.workshop_id = w.id AND r.status = 'confirmed'
+ GROUP BY w.id, w.title ORDER BY w.id;

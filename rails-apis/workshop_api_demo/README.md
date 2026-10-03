@@ -1,0 +1,3 @@
+# Workshop API — separate worked example
+Ruby 3.3.4 / Rails 8.1.3.1; SQLite; fictional workshops only. Title, nonnegative integer capacity, starts_on. Local teaching API only; no auth or production deployment. Use the exact recording states and setup guide. Do not reuse a real registration list.
+Run `bundle check`, `bin/rails db:prepare`, `bin/rails test test/integration/workshops_api_test.rb`. The normal API is `/api/v1/workshops`; the assessed learner project remains `/api/v1/practice_sessions` in the separate starter. The example demonstrates mechanisms without handing learners the final project reference.

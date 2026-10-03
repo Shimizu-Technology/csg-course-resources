@@ -1,0 +1,5 @@
+--- 01_start.sql
++++ 01_end.sql
+@@ -1 +1 @@
+-SELECT title FROM workshops ORDER BY id;
++SELECT id, title, category, capacity FROM workshops ORDER BY id;

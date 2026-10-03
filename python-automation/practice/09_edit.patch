@@ -1,0 +1,23 @@
+--- 09_start.py
++++ 09_end.py
+@@ -97,9 +97,14 @@
+             "total": sum(totals.values(), Decimal("0.00"))}
+ 
+ 
+-result = build_demo_report(DEMO_CSV)
+-print(result["csv"], end="")
+-print(f"valid={result['valid']} skipped={result['skipped']} errors={len(result['errors'])}")
+-print(f"Grand total: {result['total']:.2f}")
+-for error in result["errors"]:
+-    print(error)
++header_only = "order_id,item,qty,unit_price,status\n"
++print("empty:", repr(build_demo_report(header_only)["csv"]))
++duplicate = build_demo_report(DEMO_CSV + "D1,Ribbon,1,1.50,paid\n")
++print("duplicate:", duplicate["errors"][-1])
++try:
++    build_demo_report("item,qty\nRibbon,2\n")
++except ValueError as error:
++    print("missing header:", error)
++multiline = header_only + 'M1,"Blue\nribbon",1,1.00,paid\nM2,Ties,0,0.25,paid\n'
++print("multiline:", build_demo_report(multiline)["errors"][0])
++print("original:", f"{build_demo_report(DEMO_CSV)['total']:.2f}")

@@ -1,0 +1,13 @@
+test_blank_and_negative_are_invalid (test_inventory.InventoryTests) ... ok
+test_fractional_units_are_invalid (test_inventory.InventoryTests) ... ok
+test_text_units_do_not_crash (test_inventory.InventoryTests) ... ok
+test_zero_is_valid (test_inventory.InventoryTests) ... ok
+test_trim_and_combine (test_local_contract.LocalContractTests) ... ok
+test_boolean_missing_and_non_dictionary (test_inventory_edges.InventoryEdgesTests) ... ok
+test_empty_and_large_units (test_inventory_edges.InventoryEdgesTests) ... ok
+test_invalid_count_once_then_continue (test_inventory_edges.InventoryEdgesTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in <elapsed>s
+
+OK

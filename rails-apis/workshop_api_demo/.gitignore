@@ -1,0 +1,6 @@
+/config/master.key
+/config/credentials.yml.enc
+/storage/*.sqlite3
+/storage/*.sqlite3-*
+/log/*.log
+/tmp/cache/

@@ -1,0 +1,20 @@
+{
+  "01_start.py": "Supply report practice\n",
+  "01_end.py": "['order_id', 'item', 'qty', 'unit_price', 'status']\nitem=' Ribbon ' qty='2'\n",
+  "02_start.py": "['order_id', 'item', 'qty', 'unit_price', 'status']\nitem=' Ribbon ' qty='2'\n",
+  "02_end.py": "Ribbon paid\nrouted paid=5 skipped=1\n",
+  "03_start.py": "Ribbon paid\nrouted paid=5 skipped=1\n",
+  "03_end.py": "Ribbon 3.00\nquantity must be positive\n",
+  "04_start.py": "Ribbon 3.00\nquantity must be positive\n",
+  "04_end.py": "Ribbon 3.00\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\nRibbon 1.50\nTies 1.00\n",
+  "05_start.py": "Ribbon 3.00\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\nRibbon 1.50\nTies 1.00\n",
+  "05_end.py": "valid=3 skipped=1 errors=2\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\n",
+  "06_start.py": "valid=3 skipped=1 errors=2\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\n",
+  "06_end.py": "Ribbon 4.50\nTies 1.00\n",
+  "07_start.py": "Ribbon 4.50\nTies 1.00\n",
+  "07_end.py": "item,total\nRibbon,4.50\nTies,1.00\n",
+  "08_start.py": "item,total\nRibbon,4.50\nTies,1.00\n",
+  "08_end.py": "item,total\nRibbon,4.50\nTies,1.00\nvalid=3 skipped=1 errors=2\nGrand total: 5.50\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\n",
+  "09_start.py": "item,total\nRibbon,4.50\nTies,1.00\nvalid=3 skipped=1 errors=2\nGrand total: 5.50\nline 4: quantity must be positive and price nonnegative\nline 5: invalid quantity or price\n",
+  "09_end.py": "empty: 'item,total\\n'\nduplicate: line 8: duplicate D1\nmissing header: Required headers must appear once\nmultiline: line 4: quantity must be positive and price nonnegative\noriginal: 5.50\n"
+}

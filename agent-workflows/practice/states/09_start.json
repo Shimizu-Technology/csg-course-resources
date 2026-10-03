@@ -1,0 +1,24 @@
+{
+  "lesson": 9,
+  "state": "start",
+  "files": {
+    "inventory.py": "@path:inventory_end.py",
+    "test_inventory.py": "@path:test_inventory.py",
+    "README.md": "@path:README.md",
+    "reproduction.md": "Starter baseline: 3 failures, 1 error. Zero rejected; blank group; fractional units accepted; text comparison crashes. No source changed.\n",
+    "acceptance.md": "@path:acceptance.md",
+    "test_local_contract.py": "@path:test_local_contract.py",
+    "plan-review.md": "Saved response reviewed against README. Zero and bool rules are correct; no dependencies or outside file justified. No live tool/version inferred. Approved scope: inventory.py only.\n",
+    "verification.md": "Independent baseline plus authored check: 5 tests pass. inventory.py-only agent diff checked. Supplied test hashes preserved.\n",
+    "rejection.md": "Rejected proposed edit to zero-unit expected result: it weakens README and edits a forbidden supplied test. The saved unsafe shell suggestion is text only. No patch/command applied.\n",
+    "test_inventory_edges.py": "@path:test_inventory_edges.py",
+    "PR.md": "@path:pr-draft.md"
+  },
+  "command": "python3 -B -m unittest -v test_inventory.py test_local_contract.py test_inventory_edges.py",
+  "expected": {
+    "tests": 8,
+    "failures": 0,
+    "errors": 0
+  },
+  "commit_repair": true
+}

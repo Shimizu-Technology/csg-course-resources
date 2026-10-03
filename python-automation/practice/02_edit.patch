@@ -1,0 +1,21 @@
+--- 02_start.py
++++ 02_end.py
+@@ -19,5 +19,16 @@
+ rows = []
+ for fields in reader:
+     rows.append(dict(zip(headers, fields)))
+-print(headers)
+-print(f"item={rows[0]['item']!r} qty={rows[0]['qty']!r}")
++first_item = rows[0]["item"].strip()
++first_status = rows[0]["status"].strip().lower()
++print(first_item, first_status)
++skipped = 0
++paid = []
++for row in rows:
++    status = row["status"].strip().lower()
++    if status == "unpaid":
++        skipped += 1
++        continue
++    if status == "paid":
++        paid.append(row)
++print(f"routed paid={len(paid)} skipped={skipped}")

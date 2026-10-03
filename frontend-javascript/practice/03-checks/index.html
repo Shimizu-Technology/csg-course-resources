@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Errand Practice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to errand practice</a>
+  <header class="site-header"><div class="container"><p class="eyebrow">CSG practice project</p><h1>Errand Practice</h1><p>Keep your next learning steps in one place.</p></div></header>
+  <main id="main" class="container grid">
+    <section class="card" aria-labelledby="add-heading">
+      <h2 id="add-heading">Add a task</h2>
+      <form id="task-form" novalidate>
+        <label for="task-title">Task name</label>
+        <input id="task-title" name="title" maxlength="80" required aria-describedby="title-hint">
+        <p id="title-hint" class="hint">Use a short action, such as “Bring notebook”.</p>
+        <label for="task-category">Category</label>
+        <select id="task-category" name="category"><option>Practice</option><option>Project</option><option>Review</option></select>
+        <button type="submit">Add task</button>
+      </form>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="card" aria-labelledby="tasks-heading">
+      <div class="section-heading"><h2 id="tasks-heading">Your tasks</h2><p id="task-count" aria-live="polite">0 tasks remaining</p></div>
+      <label for="task-filter">Show</label>
+      <select id="task-filter"><option value="all">All tasks</option><option value="open">To do</option><option value="done">Done</option></select>
+      <p id="empty-state">No tasks yet. Add one to begin.</p>
+      <ul id="task-list" aria-label="Study tasks"></ul>
+    </section>
+  </main>
+  <footer class="container"><p>Practice project. Tasks reset when this page reloads.</p></footer>
+</body>
+</html>

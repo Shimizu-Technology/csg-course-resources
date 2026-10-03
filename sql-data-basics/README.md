@@ -1,9 +1,7 @@
-# SQL and Data Basics · learner starter
+# SQL and Data Basics learner resources
 
-**Course status:** preparation draft. Your instructor will open the course in CSG Learn after the setup and submission flow is checked. Basic variables and tables are helpful; the course teaches SQL from the beginning.
+Recordings and admissions are pending. Read [LEARNER.md](LEARNER.md). The canonical route uses Hafa’s native SQL project, with no local Python or GitHub requirement. Copy [schema.sql](hafa/schema.sql) and [seed.sql](hafa/seed.sql) into their matching Hafa files; enter one query at a time in `main.sql`. Use [queries_starter.sql](starter/queries_starter.sql) for your independent five-query project.
 
-This fictional workshop database has four workshops and eight registration rows. For local Python 3, keep [schema.sql](starter/schema.sql) beside [sql_starter.py](starter/sql_starter.py). Change its `QUERY` string, then run `python3 sql_starter.py`. Begin with `SELECT id, title, capacity FROM workshops ORDER BY id`; it should print four rows, from Python Basics to Git Basics. The five final questions are in [queries_starter.sql](starter/queries_starter.sql), with no answers filled in.
+The `practice/` database is a separate fictional worked example. The assessed workshop database has four workshops and eight registration rows; reason about the row unit, joins and zero-registration workshops. Local Python/SQLite tooling in `starter/` is an optional alternate route; run it from that folder with its schema beside it.
 
-For Hafa Code, create a new SQL project. Replace its `schema.sql` with [hafa/schema.sql](hafa/schema.sql), its `seed.sql` with [hafa/seed.sql](hafa/seed.sql), and its `main.sql` with one query at a time. Run the overview first. The held Hafa preview returned the four expected rows and the confirmed-count `LEFT JOIN` returned `2, 3, 1, 0`, including Git Basics at zero. This does not yet establish the production learner flow.
-
-Submit all five final SQL queries, their output tables, and a short finding in Learn. Paste the SQL and output there even if you add a Hafa or GitHub link. These are teaching numbers, not actual CSG registrations or revenue.
+Submit the exact SQL, result tables and explanation in Learn. A mutable Hafa or GitHub link is only a second reference. These are teaching numbers, not actual CSG registrations or revenue. Staff must verify the delivered Hafa and learner-account flow before admission.

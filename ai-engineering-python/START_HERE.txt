@@ -1,0 +1,1 @@
+Read LEARNER.md. Run python3 practice/bridge.py. Implement learner/student_triage.py yourself. Tests: cd learner then python3 -m unittest test_student_triage -v. The supplied client requires privately provisioned CSG HTTPS access; no provider key belongs here. Never include credentials in Git or submissions.

@@ -1,0 +1,14 @@
+--- 01_start.py
++++ 01_end.py
+@@ -14,4 +14,10 @@
+ D6,Ties,4,0.25,paid
+ """
+ 
+-print("Supply report practice")
++reader = csv.reader(StringIO(DEMO_CSV))
++headers = next(reader)
++rows = []
++for fields in reader:
++    rows.append(dict(zip(headers, fields)))
++print(headers)
++print(f"item={rows[0]['item']!r} qty={rows[0]['qty']!r}")

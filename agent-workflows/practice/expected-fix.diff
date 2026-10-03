@@ -1,0 +1,28 @@
+--- a/inventory.py
++++ b/inventory.py
+@@ -1,14 +1,21 @@
+-"""Deliberately broken fictional community supply-unit tracker."""
++"""Worked whole-unit validator; not the final expense-report solution."""
+ 
+ 
+ def summarize_units(rows):
+     totals = {}
+     invalid = 0
+     for row in rows:
+-        supply = row.get("supply", "")
+-        units = row.get("units")
+-        if not units or units < 0:
++        if not isinstance(row, dict):
+             invalid += 1
+             continue
++        supply = row.get("supply")
++        units = row.get("units")
++        if not isinstance(supply, str) or not supply.strip():
++            invalid += 1
++            continue
++        if isinstance(units, bool) or not isinstance(units, int) or units < 0:
++            invalid += 1
++            continue
++        supply = supply.strip()
+         totals[supply] = totals.get(supply, 0) + units
+     return {"totals": totals, "invalid_rows": invalid}
