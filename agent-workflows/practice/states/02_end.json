@@ -1,0 +1,19 @@
+{
+  "lesson": 2,
+  "state": "end",
+  "files": {
+    "inventory.py": "@path:inventory_start.py",
+    "test_inventory.py": "@path:test_inventory.py",
+    "README.md": "@path:README.md",
+    "reproduction.md": "Starter baseline: 3 failures, 1 error. Zero rejected; blank group; fractional units accepted; text comparison crashes. No source changed.\n",
+    "acceptance.md": "@path:acceptance.md",
+    "test_local_contract.py": "@path:test_local_contract.py"
+  },
+  "command": "python3 -B -m unittest -v test_inventory.py test_local_contract.py",
+  "expected": {
+    "tests": 5,
+    "failures": 4,
+    "errors": 1
+  },
+  "commit_repair": false
+}

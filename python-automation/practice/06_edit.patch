@@ -1,0 +1,21 @@
+--- 06_start.py
++++ 06_end.py
+@@ -72,7 +72,14 @@
+     return valid, errors, skipped
+ 
+ 
+-valid, errors, skipped = parse_demo(DEMO_CSV)
+-print(f"valid={len(valid)} skipped={skipped} errors={len(errors)}")
+-for error in errors:
+-    print(error)
++def group_items(records):
++    totals = {}
++    for record in records:
++        item = record["item"]
++        totals[item] = totals.get(item, Decimal("0.00")) + record["amount"]
++    return dict(sorted(totals.items()))
++
++
++valid, _, _ = parse_demo(DEMO_CSV)
++for item, amount in group_items(valid).items():
++    print(item, f"{amount:.2f}")

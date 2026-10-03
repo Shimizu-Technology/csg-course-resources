@@ -1,0 +1,26 @@
+--- 03_start.py
++++ 03_end.py
+@@ -19,16 +19,10 @@
+ rows = []
+ for fields in reader:
+     rows.append(dict(zip(headers, fields)))
+-first_item = rows[0]["item"].strip()
+-first_status = rows[0]["status"].strip().lower()
+-print(first_item, first_status)
+-skipped = 0
+-paid = []
+-for row in rows:
+-    status = row["status"].strip().lower()
+-    if status == "unpaid":
+-        skipped += 1
+-        continue
+-    if status == "paid":
+-        paid.append(row)
+-print(f"routed paid={len(paid)} skipped={skipped}")
++row = rows[0]
++qty = int(row["qty"])
++price = Decimal(row["unit_price"])
++print(row["item"].strip(), f"{qty * price:.2f}")
++zero_qty = int(rows[2]["qty"])
++if zero_qty <= 0:
++    print("quantity must be positive")

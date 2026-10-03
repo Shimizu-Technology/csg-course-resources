@@ -1,0 +1,5 @@
+--- 03_start.sql
++++ 03_end.sql
+@@ -1 +1 @@
+-SELECT title, capacity FROM workshops WHERE capacity >= 4 ORDER BY title;
++SELECT title, capacity FROM workshops WHERE category = 'code' AND capacity >= 4 ORDER BY title;

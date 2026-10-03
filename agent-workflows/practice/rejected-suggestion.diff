@@ -1,0 +1,7 @@
+--- a/test_inventory.py
++++ b/test_inventory.py
+@@ -4,3 +4,3 @@
+ class InventoryTests(unittest.TestCase):
+     def test_zero_is_valid(self):
+-        self.assertEqual(summarize_units([{"supply": "Ribbon", "units": 0}]), {"totals": {"Ribbon": 0}, "invalid_rows": 0})
++        self.assertEqual(summarize_units([{"supply": "Ribbon", "units": 0}]), {"totals": {}, "invalid_rows": 1})

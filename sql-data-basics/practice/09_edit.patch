@@ -1,0 +1,11 @@
+--- 09_start.sql
++++ 09_end.sql
+@@ -1 +1,7 @@
+-SELECT DISTINCT w.title FROM workshops AS w JOIN registrations AS r ON r.workshop_id = w.id WHERE r.status != 'confirmed' ORDER BY w.title;
++SELECT w.title
++FROM workshops AS w
++LEFT JOIN registrations AS r
++  ON r.workshop_id = w.id AND r.status = 'confirmed'
++GROUP BY w.id, w.title
++HAVING COUNT(r.id) = 0
++ORDER BY w.title;

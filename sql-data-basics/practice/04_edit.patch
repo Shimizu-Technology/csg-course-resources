@@ -1,0 +1,5 @@
+--- 04_start.sql
++++ 04_end.sql
+@@ -1 +1 @@
+-SELECT COUNT(*) AS registration_rows FROM registrations;
++SELECT status, COUNT(*) AS registration_rows FROM registrations GROUP BY status ORDER BY status;

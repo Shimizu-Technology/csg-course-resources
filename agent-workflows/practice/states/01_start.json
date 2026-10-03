@@ -1,0 +1,16 @@
+{
+  "lesson": 1,
+  "state": "start",
+  "files": {
+    "inventory.py": "@path:inventory_start.py",
+    "test_inventory.py": "@path:test_inventory.py",
+    "README.md": "@path:README.md"
+  },
+  "command": "python3 -B -m unittest -v test_inventory.py",
+  "expected": {
+    "tests": 4,
+    "failures": 3,
+    "errors": 1
+  },
+  "commit_repair": false
+}

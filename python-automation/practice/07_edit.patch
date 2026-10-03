@@ -1,0 +1,19 @@
+--- 07_start.py
++++ 07_end.py
+@@ -80,6 +80,14 @@
+     return dict(sorted(totals.items()))
+ 
+ 
++def write_totals(totals):
++    output = StringIO()
++    writer = csv.writer(output, lineterminator="\n")
++    writer.writerow(["item", "total"])
++    for item, amount in totals.items():
++        writer.writerow([item, f"{amount:.2f}"])
++    return output.getvalue()
++
++
+ valid, _, _ = parse_demo(DEMO_CSV)
+-for item, amount in group_items(valid).items():
+-    print(item, f"{amount:.2f}")
++print(write_totals(group_items(valid)), end="")

@@ -1,16 +1,11 @@
 # Course resource release checks
 
-**Status on September 26, 2026:** repository prepared for review. The December learner cohort is not yet enrolled, and these links have not been checked from an enrolled learner account.
+**Updated October 4, 2026.** The original six-course resources PR #1 merged into main on September28. This revision adds repaired learner contracts, separate worked examples, complete setup text and an AI starter. The repository remains private. Files and checked staff programs do not establish enrollment readiness.
 
-**September 28 addition:** Six future courses now have learner-only starter folders in a held branch. They are not visible on `main`, not assigned to students in Learn, and not sale-ready. Check every file and link against its Learn lesson before distributing. In particular, the SQL Hafa fixture was verified in the held Hafa preview, while server sharing failed and fell back to a long snapshot URL. Keep the actual SQL and output in Learn submissions. The Rails starter must be rehearsed on a fresh Mac and Windows/WSL setup before it is required.
+Before distribution, compare these files with the imported Learn course and exact recording script. Keep assessment references, staff keys, course-package JSON, provider services, credentials, seat files and private learner records out of this repository. Distinct worked practice is included for teaching; independent project solutions are withheld.
 
-## Before giving learners a link
+Rehearse the current Hafa/browser/local route and all relative resource links using a separate learner profile. Deliver the matching per-course ZIP through the protected Learn course. Whole-repository access would expose all nine paid courses and is not the single-course delivery route. Verify that an enrolled learner can download their bundle and an unenrolled learner cannot. GitHub remains optional for browser-first courses. Fresh Mac/Windows/WSL setup and beginner attempts remain unobserved.
 
-- Compare `python-fundamentals/2026-12/starter/expense_summary.py` with the current Lesson 8 starter in production CSG Learn. The six expense records and budget should match exactly.
-- Run `python3 -m compileall -q python-fundamentals/2026-12` locally and copy each runnable practice starter into production Hafa Code. Check a fresh session, not only a warm one.
-- Check the README and links from a learner account. A private GitHub repository requires each learner to be granted access. If access is awkward, give learners the files through Learn; GitHub is optional for this pilot.
-- Keep the repository private while it contains preparation notes. If any part becomes public, check every file and commit history for staff answers and private information first. A later public learner repository should be a clean copy, not a visibility flip without a history audit.
-- Confirm the final Learn page, recording, transcript, starter file, expected output, and feedback wording agree.
-- Do not publish the optional local setup or GitHub guides as tested until they have been rehearsed on a current Mac and Windows 11/WSL machine with a fresh demo account.
+Live AI access is supplied privately by CSG within the course allowance; it is not provided by these files. Record actual model evidence only after the HTTPS endpoint, allowance and expiry are provisioned. Fixture results are offline practice.
 
-CSG Learn remains the submission and feedback record. This repository does not grant course access or meeting entitlement.
+After capture, verify captions, phone playback, progress, code submissions, feedback, messages and format-specific meetings. Complete approved terms and payment-to-entitlement rehearsal before opening admissions. These files grant neither course access nor meeting entitlement. Do not change repository visibility as part of this release.

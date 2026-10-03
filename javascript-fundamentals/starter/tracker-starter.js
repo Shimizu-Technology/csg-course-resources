@@ -17,6 +17,10 @@ function totalsByCategory(expenses) {
   // TODO: return an object, for example { Food: 61 }.
 }
 
+function totalForCategory(expenses, category) {
+  // TODO: sum only matching categories; absent category => 0.
+}
+
 function largestExpense(expenses) {
   // TODO: return an expense object, or null for an empty list.
 }

@@ -1,0 +1,76 @@
+test_blank_and_negative_are_invalid (test_inventory.InventoryTests) ... FAIL
+test_fractional_units_are_invalid (test_inventory.InventoryTests) ... FAIL
+test_text_units_do_not_crash (test_inventory.InventoryTests) ... ERROR
+test_zero_is_valid (test_inventory.InventoryTests) ... FAIL
+test_trim_and_combine (test_local_contract.LocalContractTests) ... FAIL
+
+======================================================================
+ERROR: test_text_units_do_not_crash (test_inventory.InventoryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<worked-repo>/test_inventory.py", line 14, in test_text_units_do_not_crash
+    self.assertEqual(summarize_units([{"supply": "Ribbon", "units": "five"}]), {"totals": {}, "invalid_rows": 1})
+  File "<worked-repo>/inventory.py", line 10, in summarize_units
+    if not units or units < 0:
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+======================================================================
+FAIL: test_blank_and_negative_are_invalid (test_inventory.InventoryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<worked-repo>/test_inventory.py", line 11, in test_blank_and_negative_are_invalid
+    self.assertEqual(summarize_units(rows), {"totals": {"Ribbon": 5}, "invalid_rows": 2})
+AssertionError: {'totals': {'': 3, 'Ribbon': 5}, 'invalid_rows': 1} != {'totals': {'Ribbon': 5}, 'invalid_rows': 2}
+- {'invalid_rows': 1, 'totals': {'': 3, 'Ribbon': 5}}
+?                  ^             -------
+
++ {'invalid_rows': 2, 'totals': {'Ribbon': 5}}
+?                  ^
+
+
+======================================================================
+FAIL: test_fractional_units_are_invalid (test_inventory.InventoryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<worked-repo>/test_inventory.py", line 17, in test_fractional_units_are_invalid
+    self.assertEqual(summarize_units([{"supply": "Ribbon", "units": 1.5}]), {"totals": {}, "invalid_rows": 1})
+AssertionError: {'totals': {'Ribbon': 1.5}, 'invalid_rows': 0} != {'totals': {}, 'invalid_rows': 1}
+- {'invalid_rows': 0, 'totals': {'Ribbon': 1.5}}
+?                  ^             -------------
+
++ {'invalid_rows': 1, 'totals': {}}
+?                  ^
+
+
+======================================================================
+FAIL: test_zero_is_valid (test_inventory.InventoryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<worked-repo>/test_inventory.py", line 7, in test_zero_is_valid
+    self.assertEqual(summarize_units([{"supply": "Ribbon", "units": 0}]), {"totals": {"Ribbon": 0}, "invalid_rows": 0})
+AssertionError: {'totals': {}, 'invalid_rows': 1} != {'totals': {'Ribbon': 0}, 'invalid_rows': 0}
+- {'invalid_rows': 1, 'totals': {}}
+?                  ^
+
++ {'invalid_rows': 0, 'totals': {'Ribbon': 0}}
+?                  ^             +++++++++++
+
+
+======================================================================
+FAIL: test_trim_and_combine (test_local_contract.LocalContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<worked-repo>/test_local_contract.py", line 9, in test_trim_and_combine
+    self.assertEqual(summarize_units(rows), {"totals": {"Ribbon": 2}, "invalid_rows": 0})
+AssertionError: {'totals': {' Ribbon ': 2}, 'invalid_rows': 1} != {'totals': {'Ribbon': 2}, 'invalid_rows': 0}
+- {'invalid_rows': 1, 'totals': {' Ribbon ': 2}}
+?                  ^              -      -
+
++ {'invalid_rows': 0, 'totals': {'Ribbon': 2}}
+?                  ^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in <elapsed>s
+
+FAILED (failures=4, errors=1)

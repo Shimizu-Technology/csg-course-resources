@@ -1,0 +1,35 @@
+--- 04_start.py
++++ 04_end.py
+@@ -14,15 +14,22 @@
+ D6,Ties,4,0.25,paid
+ """
+ 
+-reader = csv.reader(StringIO(DEMO_CSV))
++reader = csv.reader(StringIO(DEMO_CSV), strict=True)
+ headers = next(reader)
+-rows = []
++previous_line = reader.line_num
+ for fields in reader:
+-    rows.append(dict(zip(headers, fields)))
+-row = rows[0]
+-qty = int(row["qty"])
+-price = Decimal(row["unit_price"])
+-print(row["item"].strip(), f"{qty * price:.2f}")
+-zero_qty = int(rows[2]["qty"])
+-if zero_qty <= 0:
+-    print("quantity must be positive")
++    source_line = previous_line + 1
++    previous_line = reader.line_num
++    row = dict(zip(headers, fields))
++    if row["status"].strip().lower() != "paid":
++        continue
++    try:
++        qty = int(row["qty"])
++        price = Decimal(row["unit_price"])
++    except (ValueError, InvalidOperation):
++        print(f"line {source_line}: invalid quantity or price")
++        continue
++    if qty <= 0 or not price.is_finite() or price < 0:
++        print(f"line {source_line}: quantity must be positive and price nonnegative")
++        continue
++    print(row["item"].strip(), f"{qty * price:.2f}")

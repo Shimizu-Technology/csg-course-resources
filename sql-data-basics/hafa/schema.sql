@@ -1,4 +1,4 @@
--- Fictional CSG teaching tables. Paste into Hafa Code's schema.sql.
+-- Fictional assessed workshop schema; use in Hafa schema.sql.
 CREATE TABLE workshops (
   id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,

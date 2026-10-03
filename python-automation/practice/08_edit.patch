@@ -1,0 +1,22 @@
+--- 08_start.py
++++ 08_end.py
+@@ -89,5 +89,17 @@
+     return output.getvalue()
+ 
+ 
+-valid, _, _ = parse_demo(DEMO_CSV)
+-print(write_totals(group_items(valid)), end="")
++def build_demo_report(source):
++    valid, errors, skipped = parse_demo(source)
++    totals = group_items(valid)
++    return {"csv": write_totals(totals), "valid": len(valid),
++            "skipped": skipped, "errors": errors,
++            "total": sum(totals.values(), Decimal("0.00"))}
++
++
++result = build_demo_report(DEMO_CSV)
++print(result["csv"], end="")
++print(f"valid={result['valid']} skipped={result['skipped']} errors={len(result['errors'])}")
++print(f"Grand total: {result['total']:.2f}")
++for error in result["errors"]:
++    print(error)

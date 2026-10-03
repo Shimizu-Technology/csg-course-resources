@@ -12,6 +12,10 @@ SESSIONS = [
 ]
 GOAL = 120
 
+def valid_session?(session)
+  # TODO: require a hash, a nonblank string topic, and nonnegative integer minutes.
+end
+
 def total_minutes(sessions)
   # TODO: add every session's minutes. An empty array should return 0.
 end
@@ -26,10 +30,13 @@ end
 
 def goal_status(total, goal)
   # TODO: return "under goal by N minutes", "on goal", or "over goal by N minutes".
+  # Use "minute" for a difference of exactly 1.
 end
 
 def report(sessions, goal)
-  # TODO: combine the results into a readable summary.
+  # TODO: require an array and nonnegative integer goal; reject invalid sessions
+  # using valid_session?, then combine results.
+  # Raise ArgumentError for bad input; return a string, not printed output.
 end
 
 puts report(SESSIONS, GOAL)

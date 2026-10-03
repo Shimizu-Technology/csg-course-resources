@@ -1,7 +1,17 @@
-"""Learner starter with the fictional orders.csv rows embedded for browser use."""
+"""Learner final project: the Notebook/Pen data is NOT the lesson worked example.
+Use Python's standard library only. parse_orders returns (records, errors, skipped).
+Each accepted record has order_id, stripped item, and a Decimal amount. Report
+physical CSV record-start lines. Ignore blank lines; reject wrong field counts,
+unknown statuses, missing IDs/items, repeated accepted IDs, nonpositive integer
+quantity, nonfinite/negative prices, and prices with more than two decimal places.
+Unpaid rows are counted and intentionally skipped. Missing/duplicate required
+headers and malformed CSV reject the whole source with ValueError. make_report
+returns report_csv, valid, skipped, errors, grand_total (Decimal). The report is
+alphabetic, has item,total header and a trailing newline. Do not import a staff key.
+"""
 
 import csv
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from io import StringIO
 
 RAW_CSV = """order_id,item,qty,unit_price,status

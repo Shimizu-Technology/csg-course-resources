@@ -19,3 +19,5 @@ Use the [starter](../starter/expense_summary.py). The complete project brief and
 | Exact budget | Six expenses and budget 118 | Exactly on budget, not under or over. |
 
 Paste your final code, output for the required cases, and a short explanation into Learn. You may also add a Hafa Code or GitHub link. If you revise after feedback, submit the revised code and say what changed.
+
+Required cases: normal records; empty records; absent Health category; budget exactly equal to the total; and a $100 budget producing $18 over for the unchanged $118 fixture. No taxes are modeled.
