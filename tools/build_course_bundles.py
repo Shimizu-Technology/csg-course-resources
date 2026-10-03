@@ -18,9 +18,17 @@ FORBIDDEN = {".env", "learn-package.json", "learn-source.json", "STAFF.md",
 
 
 def build() -> dict:
-    tracked = subprocess.check_output(
-        ["git", "ls-files", "-z"], cwd=ROOT
+    entries = subprocess.check_output(
+        ["git", "ls-files", "--stage", "-z"], cwd=ROOT
     ).decode().split("\0")
+    tracked = {}
+    for entry in entries:
+        if entry:
+            metadata, name = entry.split("\t", 1)
+            mode, _, stage = metadata.split()
+            if stage != "0":
+                raise ValueError(f"Unmerged learner resource: {name}")
+            tracked[name] = int(mode, 8)
     output = ROOT / "dist"
     output.mkdir(exist_ok=True)
     manifest = {"format_version": 1, "courses": {}}
@@ -35,7 +43,7 @@ def build() -> dict:
         with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
             for name in names:
                 path = ROOT / name
-                if path.is_symlink() or path.name in FORBIDDEN or any(
+                if tracked[name] not in {0o100644, 0o100755} or path.is_symlink() or path.name in FORBIDDEN or any(
                     part in {"staff", "solutions", "node_modules", "__pycache__"}
                     for part in path.relative_to(ROOT).parts
                 ):
@@ -43,7 +51,8 @@ def build() -> dict:
                 data = path.read_bytes()
                 info = zipfile.ZipInfo(name, date_time=(2026, 10, 4, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
-                info.external_attr = 0o100644 << 16
+                info.create_system = 3
+                info.external_attr = tracked[name] << 16
                 bundle.writestr(info, data)
                 members[name] = hashlib.sha256(data).hexdigest()
         manifest["courses"][course] = {

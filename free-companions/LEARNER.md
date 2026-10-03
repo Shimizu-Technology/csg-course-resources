@@ -1,67 +1,141 @@
-# GitHub and local setup — learner guide
+# GitHub and Local Setup
 
-Version October 4, 2026. Follow the route your course requires. GitHub and local Python remain optional for browser-first Fundamentals. Rails uses its separate Ruby setup bridge. No fresh OS or account walkthrough has been verified yet; stop at a setup error and send staff the exact error without credentials.
+These optional companions help you save, review and share fictional practice code. Python Fundamentals can stay in Hafa and Learn without installing software or creating a GitHub account. Choose local setup when a course needs local files, packages or a real Git repository. Agent Workflows requires the local Git route before it begins. Rails and other local courses need their own runtime setup; these Python steps do not install Ruby or Rails.
+
+Use a disposable practice folder and repository, not client work. Keep passwords, API keys, private keys and private information out of files, commits and submissions. Follow the current official references for your computer; versions and screens can change. The guide does not establish that your installation or account works: completion evidence comes from your own run and access checks.
+
+Suggested routes: browser GitHub G0→G1→G2→G3→G4; local Mac S0→M1→M2, then G5→G6→G7; local Windows S0→W1→W2, then G5→G6→G7. The local Git route also needs the G1 repository/account. Use S1 whenever you need troubleshooting or a completion check. You may skip lessons that your current course does not need.
 
 ## G0 — Git, GitHub and a reviewable version
 
+Git records versions of files on your computer. GitHub can host a copy and a change for someone to review. A commit is a saved version with a short explanation. A branch holds a proposed line of work separately. A pull request shows a proposed change and its checks.
 
-“Git records versions of files on your computer. GitHub can host a copy and a change for someone to review. A commit is a saved version with a short explanation. A branch lets us propose work separately. A pull request shows a proposed change and its checks. The browser route teaches those ideas without installation. The local route also teaches clone, diff, commit, push and update. Python Fundamentals can be completed entirely in Hafa and Learn. Agent Workflows needs real local Git, because reviewing an agent's changes means inspecting actual files and diffs. Keep passwords, API keys and private client data out of every practice file.”
+The browser route teaches these ideas without installation. The local route adds clone, diff, commit, push and update on real files. Agent Workflows needs that local route so you can inspect an agent's actual changes. Browser-only edits do not satisfy its local prerequisite.
 
-## G1 — account and first repository (browser route)
+Choose the route your course needs. Before using a real file, check that it contains only fictional practice information. Do not include passwords, tokens, private client data or student details.
 
+### Practice evidence
 
-“Choose a repository named csg-github-practice. Use public only for fictional practice code you are comfortable sharing. A private repository needs an explicit access invitation before an instructor can read it. Add a README so the repository already has an initial commit. Keep the default branch named main for this practice. Create the repository, then add a file named hello dot py. Enter this exact line.”
+Write two sentences explaining where Git saves a version and what GitHub adds. State which route you will use and why. A Python Fundamentals learner may choose Hafa and skip GitHub/local installation.
+
+## G1 — Account and first repository in the browser
+
+Use [GitHub account setup](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) and [creating a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). Finish verification/security prompts privately before the code exercise.
+
+1. Sign in to your own GitHub account and choose New repository.
+2. Name it `csg-github-practice`. Use public only for fictional practice code you are comfortable sharing. A private repository needs an explicit instructor invitation later.
+3. Add a README to create an initial commit. Use `main` as this practice repository's default branch. If your account gives a different name, follow [GitHub's branch-renaming instructions](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch) to name this disposable practice branch `main` before following the later commands.
+4. Create the repository. Use its add-file action to create `hello.py` with this line:
 
 ```python
 print("Hafa adai, CSG!")
 ```
 
-“The file name tells us this is Python. A commit message says what changed. This web editor stores the file; it does not prove Python ran. Paste the line into Hafa and run it. The output should be Hafa adai, CSG, with an exclamation mark. Pause and make your own repository and first program before continuing.”
+5. Preview the file and commit directly to `main` with message `Add greeting program`.
+6. Open `hello.py` and its history to confirm the saved version. The web editor stores code; it does not prove Python ran.
+7. Paste the line into Hafa's Python runner and run it. Expected output:
 
-**Evidence:** README, exact file and commit exist; Hafa greeting runs. **Recovery narration:** “If the file has a dot-txt ending, rename it to hello dot py. If output differs, compare the quotation marks and characters. An account verification screen must be completed before this exercise; it is not a code error.”
+```text
+Hafa adai, CSG!
+```
 
-## G2 — read a diff and save a second change
+If the name ends in `.txt`, rename it to `hello.py`. If the output differs, compare the saved characters and quotation marks. Account verification is an account step, not a Python error. If you cannot access the runner, send the sanitized issue to course support rather than claiming the code ran.
 
+### Practice evidence
+
+Keep your repository URL, the greeting code and actual output. Confirm a README, `hello.py` and the greeting commit exist. Do not include account verification or recovery codes.
+
+## G2 — Read a diff and save another change
+
+Open your G1 `hello.py` on `main`. Append this second line without removing the greeting:
 
 ```python
 print("I can explain one saved change.")
 ```
 
-“The new line adds a message. Open the preview or diff before committing. Added lines are marked as additions; removed lines are marked as removals. Read what actually changed, not only the commit message. Run both lines in Hafa. You should see Hafa adai, CSG, then I can explain one saved change. Commit with Add explanation message. Open the history and find the earlier version. Pause and add a third message in your own words, check it, and save it as a new commit.”
+Preview the change or open its diff before committing. Additions and removals show what changed; the commit message alone cannot prove the file is correct. Run both lines in Hafa. Expected output:
 
-**Recovery narration:** “If you edited the wrong file, leave that proposed change uncommitted, reopen hello dot py and make the intended change there. Check the file and branch before saving.”
+```text
+Hafa adai, CSG!
+I can explain one saved change.
+```
 
-## G3 — branch, pull request and review
+Commit with `Add explanation message`. Open history and find the earlier one-line version. Then add a third `print` message in your own words, run all three lines, inspect the diff and save a new meaningful commit.
 
+If you edited the wrong file, leave the proposed change uncommitted, reopen `hello.py` and make the intended edit. Check the file and branch before saving. Do not commit unrelated files just to get past this exercise.
 
-“Check the branch name first. My goal sentence is on add-practice-goal, not yet on main. Create a pull request titled Add practice goal. In the description, write: Added one practice goal to README. Checked the diff and confirmed hello dot py is unchanged. Open Files changed. I expect one README addition and no unrelated file. For this disposable practice repository, I can review and merge my own change. In a real team I follow its review rules. Pause, propose your own goal and inspect its diff before merging.”
+### Practice evidence
 
-**Recovery narration:** “If the target branch or file is wrong, correct it before merging. If the diff includes a password or private data, stop and tell the instructor; deleting it in a later commit does not erase earlier history.”
+Record the new commit link and explain one added line. Keep the actual output including your third message.
 
-## G4 — submit and verify access
+## G3 — Branch, pull request and review
 
+Start on `main` in your practice repository. Create a branch named `add-practice-goal` using GitHub's branch selector. Confirm that branch name before editing. On this branch, append the following to README:
 
-“Paste the repository URL, pull-request URL, the code being reviewed, and the output from your run. The pasted code preserves your review version. Public links should open in a signed-out browser. For a private repository, open repository Settings and its collaborator-access section. Invite only the exact instructor GitHub username supplied for your enrollment, then wait until the instructor accepts. A pending invitation or a copied URL does not prove access. Staff will check it from their own account. On a personal private repository, collaborator access includes write access; invite only the intended instructor and only to this disposable practice repository. A link that cannot be opened is not a completed submission. Never make private work public merely to get past an access error.”
+```markdown
+## Practice goal
+I want to make a small household report I can explain.
+```
 
-**Access sources:** [Repository collaborators](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository), [GitHub authentication](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github). If a current UI moved, follow the official documentation and record the new label, rather than claiming the old button exists.
+Use your own fictional goal if you prefer. Commit the README change as `Add practice goal`. The sentence now belongs to your proposal branch; it is not yet on `main`.
 
-## S0 — choose browser or local setup
+Open a compare/pull request from `add-practice-goal` **into `main`**. Title it `Add practice goal`. A suitable description is:
 
-“If you are starting Python Fundamentals, you can keep using Hafa. These local steps are optional. Choose them when a course needs local files, packages or a real Git repository. Pick Mac or Windows with WSL. A work or school computer may block installation. Ask its administrator or use an approved personal computer; do not bypass its controls. Keep Python practice data fictional. We will check the working folder, run a file and save a local change before connecting to GitHub.”
+```text
+Added one practice goal to README.
+Checked the diff and confirmed hello.py is unchanged.
+```
+
+Open Files changed. Expect one README addition and no unrelated file. Confirm the source/target branches. In your own disposable practice repository, review and merge your change after checking it; real teams have their own review rules. Return to `main` and confirm the goal appears there.
+
+If a file or target branch is wrong, correct the proposal before merging. If the diff includes a password or private information, stop and contact the instructor. Deleting it in a later commit does not erase earlier history.
+
+### Practice evidence
+
+Keep the PR link, its checked README diff and the goal visible on `main` after merge. Explain why you created a branch first.
+
+## G4 — Submit your version and verify access
+
+In the relevant Learn practice activity, submit the repository URL, PR URL, code being reviewed and actual run output. Pasted code preserves the review version even if you edit the repository later. For a public practice repository, check that its links open while signed out.
+
+For a private personal repository, get the exact instructor GitHub username supplied for your enrollment. Open repository Settings and the collaborator-access area, invite only that person, and wait for acceptance. Then ask the instructor to check the repository from their own account. A pending invitation or copied URL does not prove access. Personal-repository [collaborator permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository) allow writing, so use only the intended instructor and this disposable repository. [GitHub collaborator instructions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository) explain the current steps.
+
+Keep private work private while resolving access problems. Use the current official page if a label moved. [GitHub authentication](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github) explains account access.
+
+### Practice evidence
+
+Submit links, reviewed code/output and either your signed-out public check or the instructor's accepted/private-access confirmation. If access is still pending, state that plainly and contact support.
+
+## S0 — Choose browser or local setup
+
+Python Fundamentals can keep using Hafa and Learn. These local steps are optional for that course. Use them when you need local files, packages or real Git; advanced Agent Workflows requires local Git. Choose M1/M2 for Mac or W1/W2 for Windows with Ubuntu WSL. Then complete G5–G7 for GitHub authentication, clone and push.
+
+A work or school computer may restrict installations. Ask its administrator or use an approved personal computer. Follow the computer owner's installation permissions. Keep practice data fictional and use a dedicated folder. The first local check is running a saved file; the next is saving and reviewing a Git change.
+
+### Practice evidence
+
+Record your route and whether installation is permitted on the computer. If local setup is unnecessary for your current course, keep the working Hafa route and skip the installation lessons.
 
 ## M1 — macOS Python and editor
 
+Open Terminal and run each command separately:
 
 ```sh
 python3 --version
 git --version
 ```
 
-“These commands report installed versions. If Python is missing or is an unsupported Apple-managed copy, open the official Python macOS installer page. Read its supported-system requirements, download the signed package and install with the permission of the computer's owner. Use its normal supported build. Follow the Python installation page's certificate-completion step in the installed Python Applications folder. Do not delete Apple's Python. If Git is missing, run xcode-select dash-dash install and finish Apple's command-line-tools dialog. That is not a requirement to download full Xcode. Open a new terminal and repeat the version checks.”
+If Python is missing or only an unsuitable Apple-managed copy is available, read [Python on macOS](https://docs.python.org/3/using/mac.html) and choose a supported standard installer from [Python's official macOS downloads](https://www.python.org/downloads/macos/). Check its supported systems and publisher, then install with the owner's permission. Finish the installer guide's `Install Certificates.command` step in the installed Python folder under Applications. Do not modify/delete Apple's Python. Open a new Terminal and repeat the version check. Ask support if the chosen installer/runtime still cannot be found.
+
+For Git, follow [Git's macOS installation guidance](https://git-scm.com/install/mac). If Git is missing and installation is authorized, request Apple's command-line tools:
 
 ```sh
 xcode-select --install
 ```
+
+Finish the dialog, reopen Terminal and check `git --version`. Full Xcode is not required by this exercise.
+
+Install or open VS Code using [its official macOS guide](https://code.visualstudio.com/docs/setup/mac). Choose the supported build for your Mac, open its downloaded disk image and move the app to Applications. Then create a dedicated folder:
 
 ```sh
 mkdir -p ~/csg-practice
@@ -69,18 +143,29 @@ cd ~/csg-practice
 pwd
 ```
 
-“Mkdir creates a dedicated practice folder; dash-p allows an existing folder. Cd moves into it. Pwd reports the folder I am using. Open this same folder with the editor's Open Folder command. Create hello dot py with the greeting from G1, and save it. Do not save a rich-text document or hello dot py dot txt.”
+Open that same folder through the editor's Open Folder action. Create `hello.py` as a plain code file, save it, and enter:
+
+```python
+print("Hafa adai, CSG!")
+```
+
+Run the saved file in Terminal:
 
 ```sh
 python3 hello.py
 ```
 
-**Expected:** `Hafa adai, CSG!`
+Expect `Hafa adai, CSG!`. Change only the greeting text to `Hafa adai from my Mac`, save and run again. If the file cannot be found, check `pwd` and `ls`; the terminal must be in the folder where the file was saved. Check for an accidental `.py.txt` suffix before reinstalling anything.
 
-“I ran a file, not just an editor window. Change only the greeting to Hafa adai from my Mac, save, and run again. Pause and repeat both runs. If Python cannot find the file, check pwd and ls first; installing Python again will not fix being in the wrong folder.”
+### Practice evidence
 
-## M2 — local Git identity and first commit
+Keep the actual Python/Git versions and both run outputs. Note the file/folder relationship without exposing your personal home path in public screenshots. Installer success must be checked on your own computer.
 
+## M2 — Local Git identity and first commit
+
+Start with the saved `hello.py` in the M1 `csg-practice` folder and working Git. This folder is the local-init exercise; keep it separate from G6's later clone. If it already has Git history, inspect it with your instructor rather than rerunning an initialization over unknown work.
+
+Run these one at a time, replacing the fictional identity with your chosen commit name and email or GitHub no-reply address:
 
 ```sh
 git init -b main
@@ -94,22 +179,39 @@ git status --short
 git log --oneline -1
 ```
 
-“Init creates Git history here. The name and email shown are fictional demo values. Use your chosen commit name and the address or GitHub no-reply address you intend to attach to your own commits. These repository-local settings do not replace your identity in other projects. The short status first shows hello dot py as untracked. Add chooses that one file. Cached diff shows exactly what is staged for the next commit. Read it, then commit. A clean short status prints no file entries. Log shows one commit; its hash will differ on your computer.”
+The identity settings apply to this repository; they do not change your identity in other projects. Initially short status shows `hello.py` as untracked. Add selects that file; cached diff shows exactly what the next commit will contain. Read it before committing. A clean short status prints no file entries. Log shows a commit whose hash will differ on your computer.
 
-**Pause:** Learner records one commit hash and explains untracked versus staged versus committed. **Recovery:** “If Git says who you are is unknown, set the local name and email and retry commit. If the staged diff has an unintended file, use git restore dash-dash staged followed by that file name. That removes it from the proposed commit while keeping the file.”
+If Git says your identity is unknown, set the local name/email and retry the commit. To unstage an unintended file while keeping it, run `git restore --staged` followed by its actual filename. Do not add unrelated files or secrets. If your Git lacks `init -b` or `switch`, use its official install/update guidance and ask support rather than improvising history changes.
 
-## W1 — Windows 11 and Ubuntu WSL
+### Practice evidence
 
+Keep one commit hash and a clean status result. Explain untracked, staged and committed in your own words. A local commit is not yet a GitHub upload.
+
+## W1 — Windows and Ubuntu WSL
+
+This route uses Ubuntu inside WSL, not Windows-native Python/Git. Follow [Microsoft's current WSL installation instructions](https://learn.microsoft.com/en-us/windows/wsl/install) and their supported-system requirements. These steps are intended for an authorized, supported Windows setup; a restricted computer needs its administrator's help.
+
+Open PowerShell in administrator mode and inspect before installing:
 
 ```powershell
 wsl --list --verbose
+```
+
+If Ubuntu already exists, open it rather than reinstalling. If it is absent and installation is allowed, run:
+
+```powershell
 wsl --install -d Ubuntu
 ```
 
-“The list command shows existing Linux distributions. If Ubuntu already exists, open it rather than reinstall it. If it does not, the install command requests Ubuntu. Follow Microsoft's current supported Windows requirements and restart if asked. Open Ubuntu and create its Linux user. The password prompt does not show the characters you type. Do that off camera. Do not run later Linux commands in PowerShell.”
+Follow installation/restart prompts. Open Ubuntu and create its Linux user. Password entry displays no characters; keep that password private. After a restart, reopen Ubuntu and check the distribution list in PowerShell again. Use Microsoft's guide if the command is unavailable or installation stalls; preserve existing distributions and ask support if blocked. The later `apt`, Python and Git commands belong in Ubuntu, not PowerShell.
 
-## W2 — Linux Python, Git and editor in one environment
+### Practice evidence
 
+Confirm you can open Ubuntu and identify which terminal accepts Linux commands. Record the distribution/version result without passwords or sensitive account information. An installed icon alone is not a working runtime check.
+
+## W2 — Python, Git and VS Code in the same WSL environment
+
+Open **Ubuntu**, then run each command separately:
 
 ```sh
 sudo apt update
@@ -121,42 +223,92 @@ cd ~/csg-practice
 pwd
 ```
 
-“These commands run inside Ubuntu. Apt updates package information, then installs the named tools. Sudo may ask for your Linux password; no characters appearing is normal. Use the package source approved for this computer. Keep the project in the Linux home folder for this route. Windows and Ubuntu have different runtimes and paths.”
+Apt updates package information and installs the named tools. Sudo may ask for your Linux password without displaying characters. Use the computer's approved sources; see [Ubuntu package management](https://ubuntu.com/server/docs/how-to/software/package-management/). Keep this project in the Linux home folder. Windows and Ubuntu have distinct paths/runtimes.
+
+Install supported VS Code on the **Windows side**, including its Add to PATH option, and Microsoft's WSL extension using [the official WSL guide](https://code.visualstudio.com/docs/remote/wsl). From Ubuntu run:
 
 ```sh
 code .
 ```
 
-“Code dot opens this Linux folder in the editor's WSL connection. Check that the window shows the WSL environment. Create hello dot py with the G1 greeting, save, then run python-three hello dot py in the WSL terminal. Output should be Hafa adai, CSG. If code dot is missing, open the installed Windows editor and use its WSL connection command, then open this Linux folder. Do not fix that editor command by installing an unrelated Linux editor package.”
+Confirm the editor shows its WSL connection. Create and save `hello.py` in this Linux folder:
 
-“We now repeat the local init, identity, add, staged diff, commit and log checks from M2 in this WSL folder. Pause and show the greeting output, one commit and a clean status. The proof is the actual run and history, not merely installed icons.”
+```python
+print("Hafa adai, CSG!")
+```
 
-## G5 — authenticate local Git without copying secrets
+In the Ubuntu/WSL terminal run:
 
-**Prerequisite:** M1/M2 or W1/W2; G1 GitHub account/repository. **Chosen capture route:** SSH. Learners already using a working approved HTTPS credential manager may retain it; do not replace existing access merely for this exercise. [GitHub SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [add public key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), [test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection), [current host fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
+```sh
+python3 hello.py
+```
+
+Expect `Hafa adai, CSG!`. If `code .` is missing, reopen the terminal or use VS Code's command palette → WSL: Connect to WSL, then open this Linux folder. Do not install an unrelated Linux editor package to fix the Windows editor command. If Python cannot find the file, check `pwd`, `ls`, the saved name and editor environment.
+
+Now perform the local Git exercise **inside Ubuntu**, using your chosen commit identity instead of the fictional example:
+
+```sh
+git init -b main
+git config user.name "CSG Demo"
+git config user.email "csg-demo@example.com"
+git status --short
+git add hello.py
+git diff --cached
+git commit -m "Add local greeting"
+git status --short
+git log --oneline -1
+```
+
+Read the staged diff before committing. If this folder already has history, inspect it first. Use M2's identity/unstaging recovery if needed. Keep this folder separate from the later GitHub clone.
+
+### Practice evidence
+
+Keep the actual greeting output, one local commit and clean short status. Explain how you know both the editor and terminal used Ubuntu rather than Windows-native tools.
+
+## G5 — Authenticate local Git with a named SSH key
+
+Prerequisites: G1 account/repository and either M1/M2 or W1/W2. The demonstrated route uses SSH. If you already have a working approved HTTPS credential manager, keep it and use your repository's HTTPS clone URL; do not replace access just for practice. The SSH-specific commands below apply only to the named SSH route.
+
+Official references: [key generation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [registering a public key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), [connection testing](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection), and [current host fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
+
+In your Mac or Ubuntu terminal, check the specifically named key first:
 
 ```sh
 mkdir -p ~/.ssh
 ls ~/.ssh/csg_practice_ed25519 ~/.ssh/csg_practice_ed25519.pub
 ```
 
-“First check whether either half of our specifically named practice key already exists. If either exists, reuse or repair that named key with your instructor's help; do not overwrite it. Create a key only when both files are absent. The dot-pub file is the public half we can register. The file without dot-pub is private and stays on this computer. A passphrase protects that private file. Enter it off camera.”
+If either file exists, stop creation and reuse/repair that key with help. Only when **both files are absent**, create it:
 
 ```sh
 ssh-keygen -t ed25519 -C "CSG practice" -f ~/.ssh/csg_practice_ed25519
+```
+
+Never accept an overwrite prompt. Choose a passphrase and enter it privately. The file without `.pub` is private and stays on this computer. Display only the public half:
+
+```sh
 cat ~/.ssh/csg_practice_ed25519.pub
 ```
 
-“Copy only the public line into your account's authentication keys. This grants the corresponding private key access as your account. It does not grant an instructor access to your private repositories. Those are different permissions. Now test the named identity.”
+Copy only that public line into your GitHub account Settings → SSH and GPG keys → New SSH key. Choose Authentication key, name it `CSG practice computer`, and save it. This connects the private key to your own account; it does not give an instructor repository access.
+
+Test this specific key:
 
 ```sh
 ssh -i ~/.ssh/csg_practice_ed25519 -o IdentitiesOnly=yes -T git@github.com
 ```
 
-“At a first connection, compare the offered host fingerprint with GitHub's official current fingerprint page before accepting it. A successful test says that the named account authenticated but shell access is not provided. GitHub may return status one for this successful no-shell test; read the authentication message. Permission denied means we have not passed this gate. Check the registered public key, selected private file and account. Never paste a private key or password into Learn. This route asks for a passphrase when needed; it does not start a background SSH agent.”
+On a first connection, compare the offered fingerprint with GitHub's current official fingerprint page before accepting it. A successful message names the authenticated account and says shell access is unavailable; GitHub can return status 1 for this successful test. `Permission denied` has not passed the gate. Check the registered public key, selected private file and account. This route asks for the passphrase when needed and does not require a background SSH agent. Keep private keys/passwords out of Learn.
 
-## G6 — clone, edit, branch, diff, commit and push
+### Practice evidence
 
+Record whether the intended account authenticated, with sensitive account details omitted where appropriate. Do not submit a key, passphrase or full credential screen. Resolve failed authentication before cloning/pushing.
+
+## G6 — Clone, branch, inspect, commit and push
+
+Start after G5 authentication, with your G1 repository available. In GitHub's Code menu, copy its **actual SSH clone URL**. Read [cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) and [Git setup](https://docs.github.com/en/get-started/git-basics/set-up-git) if your repository differs.
+
+In the following clone command, `PASTE_ACTUAL_SSH_URL` is a placeholder: replace it with the copied address before running. It is not literal command text. Use your own commit identity instead of the demo identity.
 
 ```sh
 cd ~
@@ -172,11 +324,15 @@ git status --short
 git switch -c add-local-message
 ```
 
-“Clone creates a new local copy with its Git history and an origin pointing to the repository. We keep it separate from our earlier init practice. This clone command selects our named SSH identity; the local config keeps that selection for later pushes. Use your own chosen commit identity. Remote shows the repository address; verify it is your practice repository. Switch dash-c creates a branch. Do not run git init again inside this clone. If the destination already exists, reopen the known clone or choose a new disposable folder; do not delete unknown work.”
+Clone creates a new local copy with history and an `origin` pointing to GitHub. Keep it separate from the earlier init folder; do not run `git init` inside this clone. Confirm the remote points to your practice repository and the branch is `add-local-message`. If the destination already exists, reopen the known clone or choose a new disposable parent folder; do not delete unknown work. If you retained working HTTPS access, use `git clone` with your actual HTTPS URL and omit both SSH-specific configuration commands.
+
+Open this clone's `hello.py` in the editor, preserve its earlier lines and append:
 
 ```python
 print("A local change I checked myself.")
 ```
+
+Save, then run and inspect before committing:
 
 ```sh
 python3 hello.py
@@ -187,11 +343,17 @@ git commit -m "Add checked local message"
 git push -u origin add-local-message
 ```
 
-“Save and run before committing. The earlier messages remain, and the last output is A local change I checked myself. Diff shows the unstaged file change. Add stages hello dot py; cached diff shows what the commit includes. Commit saves it locally. Push uploads this branch to origin and dash-u remembers its upstream. A successful local commit alone does not prove GitHub received it. Open the repository online and confirm the branch, commit and exact line. Open a pull request targeting main and write which command you ran and what output you saw.”
+The earlier messages remain; the last output should be `A local change I checked myself.` Diff shows the unstaged change; cached diff shows the staged change. Commit saves locally. Push uploads the branch and `-u` remembers its upstream. A local commit alone does not prove GitHub received it.
 
-**Recovery narration:** “If push fails, stop and read the message. For authentication, repeat G5. For a wrong remote, compare its address with the correct Code URL before changing it. For a rejected shared-branch push, do not force-push; fetch and ask for help. Keep your local commit intact while resolving the problem.”
+Open the repository online and confirm the branch, commit and exact added line. Create a PR from `add-local-message` into `main`. Describe the command you ran and actual output. If push fails, retain your local commit and inspect the error. For authentication, repeat G5; for a wrong remote, compare with the correct Code URL before changing it. If a shared-branch push is rejected, fetch/ask for help; do not force-push.
 
-## G7 — review, update and access proof
+### Practice evidence
+
+Keep your checked diff, local commit hash, actual run output and PR link. Confirm the uploaded branch contains the same saved line you reviewed locally.
+
+## G7 — Review, update local main and prove access
+
+Review your G6 PR's one-line change. Confirm its target is `main` and no unrelated/private information is included. Merge only after that check in this disposable repository. Then return to your local clone:
 
 ```sh
 git switch main
@@ -201,13 +363,30 @@ git log --oneline -3
 git status --short
 ```
 
-“The online merge does not automatically update this local folder. Switch to main, then pull dash-dash ff-only. This accepts a straightforward history update and stops if histories diverged; it will not silently make an extra merge. Run the program again and confirm the new line exists on main. Record your commit, PR link and output in Learn. A private repository still needs accepted instructor access. For Agent Workflows, the local clone, branch, visible diff, checked commit, successful push and update are prerequisites. A browser-only edit does not satisfy that local gate.”
+The online merge does not automatically update your local folder. `--ff-only` permits a straightforward history update and stops if histories diverged; it does not silently add another merge. Run again and confirm the new line is on local `main`. Submit the commit, PR link, reviewed code and output in Learn. A private repository still needs accepted instructor access and a distinct-account check as in G4.
 
-**Recovery narration:** “If switch says local changes would be overwritten, leave them in place and commit the intended work on its branch or ask for help. Do not use a hard reset to make the warning disappear. If pull cannot fast-forward, preserve the folder and get a review of the two histories.”
+If switching would overwrite local changes, keep them and commit the intended work on its branch or ask for help. Do not use a hard reset to hide the warning. If pull cannot fast-forward, preserve the folder and ask for a review of both histories.
 
-## S1 — troubleshooting and completion evidence
+For Agent Workflows, actual local clone, branch, visible diff, checked commit, successful push and local update are prerequisites. Browser-only editing does not demonstrate them.
 
-“When a command is missing, confirm which terminal you opened and the exact spelling. When a file is missing, check pwd and ls. When a run differs, compare the saved file with the output. When an installer asks for permission, read which publisher and component it concerns. In Learn, send your operating system, the command, non-sensitive output and one issue you solved. Keep account names, home paths, private keys and recovery codes out of public screenshots.”
+### Practice evidence
 
-**Optional Python completion:** one local greeting run or the already sufficient Hafa run, no account required. **GitHub web completion:** repository, meaningful commits, checked PR, saved Learn evidence and verified access. **Local Git completion:** version checks, real clone, local branch and diff, commit, push, online PR, local main update and distinct-profile access check. The learner can explain where code is stored and which version was reviewed.
+Keep the local `main` run output, recent commit history and clean status. Confirm the reviewed version is reachable by the intended instructor; report a pending access check honestly.
 
+## S1 — Troubleshoot and collect completion evidence
+
+For a missing command, confirm the terminal and spelling. For a missing file, check `pwd` and `ls`. For different output, compare the saved file and its run. For installation permission, check the publisher/component and ask the computer owner or administrator if needed.
+
+Send course support your OS, exact command, sanitized non-sensitive output, expected result and one step you tried. Omit private keys, tokens, passwords, recovery codes, sensitive account details and personal home paths from public screenshots.
+
+Completion depends on the route:
+
+- Python/browser: a working Hafa greeting is sufficient; no account or local installation is required by Fundamentals.
+- GitHub web: repository, meaningful commits, checked/merged PR, code/output saved in Learn and verified instructor access.
+- Local Git: tool checks, actual clone, branch/diff, checked commit, successful push, online review, local `main` update and access confirmation from the intended instructor.
+
+You should be able to explain where your code is stored and which version was reviewed. Your actual results are the evidence; an installer icon, pending invitation or local-only push rehearsal is not a completed account check.
+
+### Practice evidence
+
+Submit a brief completion note for your chosen route with the relevant sanitized outputs/links and one issue you solved. If a step is blocked, identify it and request help instead of marking it complete.
